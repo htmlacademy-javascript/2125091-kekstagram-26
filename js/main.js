@@ -1,3 +1,14 @@
+function checkLengthString(yourString, lengthString){
+  if(yourString.length >= lengthString) {
+    return false;
+  }
+
+  return true;
+}
+
+checkLengthString('Nord Wing has not An-2', 66);
+
+
 //Функция, получающая слуайное число из заданного интервала
 function getNumberFromInterval(startInterval, endInterval) {
   if(endInterval !== startInterval) {
