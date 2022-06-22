@@ -50,7 +50,7 @@ const MESSAGES = [
 ]
 
 
-let arrayOfPhotoObjects = [];//Итоговый массив объектов
+const arrayOfPhotoObjects = [];//Итоговый массив объектов
 
 
 //Тут получаю массив объектов-комментов
