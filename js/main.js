@@ -28,5 +28,4 @@ for(let i = 1; i <= PHOTO_COUNT; i++) {
     likes: getNumberFromInterval(MIN_LIKE, MAX_LIKE),
     comment: getComments(getNumberFromInterval(1,5))
   };
-  console.log(arrayOfPhotoObjects);
 }
