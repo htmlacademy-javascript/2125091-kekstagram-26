@@ -1,8 +1,6 @@
-import {PHOTO_COUNT, MIN_LIKE, MAX_LIKE, DESCRIPTIONS, NAMES, MESSAGES} from 'data.js'
+import {PHOTO_COUNT, MIN_LIKE, MAX_LIKE, DESCRIPTIONS, NAMES, MESSAGES} from './data.js';
 
-import {getNumberFromInterval} from 'util.js'
-
-
+import {getNumberFromInterval} from './util.js';
 
 
 const arrayOfPhotoObjects = [];//Итоговый массив объектов
@@ -30,4 +28,5 @@ for(let i = 1; i <= PHOTO_COUNT; i++) {
     likes: getNumberFromInterval(MIN_LIKE, MAX_LIKE),
     comment: getComments(getNumberFromInterval(1,5))
   };
+  console.log(arrayOfPhotoObjects);
 }

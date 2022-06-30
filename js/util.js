@@ -18,4 +18,4 @@ function getNumberFromInterval(startInterval, endInterval) {
   return endInterval;
 }
 
-export {checkLengthString, getNumberFromInterval}
+export {checkLengthString, getNumberFromInterval};
