@@ -14,6 +14,6 @@ arrayOfPhotos.forEach(({url, likes, comment}) => {
   photoElement.querySelector('.picture__comments').textContent = comment.length;
   photoElement.querySelector('.picture__likes').textContent = likes;
   elementFragment.appendChild(photoElement);
-})
+});
 
 elementTarget.appendChild(elementFragment);
