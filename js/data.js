@@ -4,14 +4,14 @@ import {getNumberFromInterval} from './util.js';
 const PHOTO_COUNT = 25;
 const MIN_LIKE = 15;//Минимальное количество лайков
 const MAX_LIKE = 200; //Максимальное количество лайков
-
+/*
 const DESCRIPTIONS = [
   'СуперМега Фото',
   'Странная фотка',
   'Главное горзионт чтоб завалили',
   'Ну красота же',
   'У каждого такая фотка есть'
-];
+];*/
 const NAMES = [
   'Iak',
   'Kalir',
@@ -57,6 +57,6 @@ const createPhotoObjects = function(counter) {
     };
   }
   return arrayOfPhotoObjects;
-}
+};
 
-export { createPhotoObjects, PHOTO_COUNT }
+export { createPhotoObjects, PHOTO_COUNT };
