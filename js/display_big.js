@@ -50,7 +50,7 @@ function createComment(dataAsObject) {
   commentsOfBigPhoto.appendChild(elLi);
 
   return commentsOfBigPhoto;
-};
+}
 
 
 export  {bigBlock, bigPhoto, countLikesOfBigPhoto, countVisibleCommentOfBigPhoto, descriptionOfBigPhoto, commentsOfBigPhoto, countAllCommentOfBigPhoto, commentsLoader, createComment };

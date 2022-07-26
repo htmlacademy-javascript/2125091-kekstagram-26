@@ -32,7 +32,7 @@ arrayOfPhotos.forEach(({url, likes, comment, description}) => {
   });
   elementFragment.appendChild(photoElement);
 });
-console.log(elementFragment);
+
 elementTarget.appendChild(elementFragment);
 
 export {elementTarget};
