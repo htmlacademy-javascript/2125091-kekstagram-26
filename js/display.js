@@ -29,10 +29,10 @@ arrayOfPhotos.forEach(({url, likes, comment, description}) => {
     for(let i = 0; i < comment.length; i++) {
       createComment(comment[i]);
     }
-  })
+  });
   elementFragment.appendChild(photoElement);
 });
 console.log(elementFragment);
 elementTarget.appendChild(elementFragment);
 
-export {elementTarget}
+export {elementTarget};

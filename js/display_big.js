@@ -17,7 +17,7 @@ const countAllCommentOfBigPhoto = bigBlock.querySelector('.social__comment-count
 function closePopup() {
   bigBlock.classList.add('hidden');
   document.body.classList.remove('modal-open');
-}
+};
 
 const cross = bigBlock.querySelector('.big-picture__cancel');
 cross.addEventListener('click', function () {
@@ -31,10 +31,10 @@ document.addEventListener('keydown', function (evt) {
 });
 
 function createComment(dataAsObject) {
-  let elLi = document.createElement('li');
+  const elLi = document.createElement('li');
   elLi.classList.add('social__comment');
 
-  let elImg = document.createElement('img');
+  const elImg = document.createElement('img');
   elImg.classList.add('social__picture');
   elImg.src = dataAsObject.avatar;
   elImg.alt = dataAsObject.name;
@@ -42,7 +42,7 @@ function createComment(dataAsObject) {
   elImg.setAttribute('height', '35');
   elLi.appendChild(elImg);
 
-  let elP = document.createElement('p');
+  const elP = document.createElement('p');
   elP.classList.add('social__text');
   elP.textContent = dataAsObject.message;
   elLi.appendChild(elP);
@@ -50,8 +50,8 @@ function createComment(dataAsObject) {
   commentsOfBigPhoto.appendChild(elLi);
 
   return commentsOfBigPhoto;
-}
+};
 
 
-export  {bigBlock, bigPhoto, countLikesOfBigPhoto, countVisibleCommentOfBigPhoto, descriptionOfBigPhoto, commentsOfBigPhoto, countAllCommentOfBigPhoto, commentsLoader, createComment }
+export  {bigBlock, bigPhoto, countLikesOfBigPhoto, countVisibleCommentOfBigPhoto, descriptionOfBigPhoto, commentsOfBigPhoto, countAllCommentOfBigPhoto, commentsLoader, createComment };
 
