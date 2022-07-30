@@ -1,5 +1,5 @@
 import {createPhotoObjects, PHOTO_COUNT} from './data.js';
-import {bigBlock, bigPhoto, countLikesOfBigPhoto, countVisibleCommentOfBigPhoto, descriptionOfBigPhoto, commentsOfBigPhoto, countAllCommentOfBigPhoto, commentsLoader, createComment } from'./display_big.js';
+import {bigBlock, bigPhoto, countLikesOfBigPhoto, countVisibleCommentOfBigPhoto, descriptionOfBigPhoto, countAllCommentOfBigPhoto, commentsLoader, createComment } from'./display_big.js';
 
 const elementTemplate = document.querySelector('#picture').content.querySelector('.picture');
 
@@ -14,14 +14,13 @@ arrayOfPhotos.forEach(({url, likes, comment, description}) => {
   photoElement.querySelector('.picture__img').src = url;
   photoElement.querySelector('.picture__comments').textContent = comment.length;
   photoElement.querySelector('.picture__likes').textContent = likes;
-  photoElement.addEventListener('click', function () {
+  photoElement.addEventListener('click', () => {
     bigBlock.classList.remove('hidden');
     bigPhoto.src = url;
     countLikesOfBigPhoto.textContent = likes;
     countVisibleCommentOfBigPhoto.textContent = comment.length;
     descriptionOfBigPhoto.textContent = description;
     document.body.classList.add('modal-open');
-    commentsOfBigPhoto.innerHTML ='';
     countAllCommentOfBigPhoto.classList.add('hidden');
     commentsLoader.classList.add('hidden');
 
