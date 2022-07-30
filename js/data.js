@@ -4,14 +4,14 @@ import {getNumberFromInterval} from './util.js';
 const PHOTO_COUNT = 25;
 const MIN_LIKE = 15;//Минимальное количество лайков
 const MAX_LIKE = 200; //Максимальное количество лайков
-/*
+
 const DESCRIPTIONS = [
   'СуперМега Фото',
   'Странная фотка',
   'Главное горзионт чтоб завалили',
   'Ну красота же',
   'У каждого такая фотка есть'
-];*/
+];
 const NAMES = [
   'Iak',
   'Kalir',
@@ -37,7 +37,7 @@ function getComments(countOfComments) {
   for(let j = 0; j < countOfComments; j++) {
     comments[j] = {
       id: j,
-      avatar: `img/avatar${getNumberFromInterval(1, 6)}.svg`,
+      avatar: `img/avatar-${getNumberFromInterval(1, 6)}.svg`,
       message: MESSAGES[getNumberFromInterval(0, MESSAGES.length-1)],
       name: NAMES[getNumberFromInterval(0, NAMES.length - 1)]
     };
@@ -51,7 +51,7 @@ const createPhotoObjects = function(counter) {
     arrayOfPhotoObjects[i] = {
       //id: i,
       url: `photos/${i}.jpg`,
-      //description: DESCRIPTIONS[getNumberFromInterval(0, DESCRIPTIONS.length-1)],
+      description: DESCRIPTIONS[getNumberFromInterval(0, DESCRIPTIONS.length-1)],
       likes: getNumberFromInterval(MIN_LIKE, MAX_LIKE),
       comment: getComments(getNumberFromInterval(1,5))
     };
